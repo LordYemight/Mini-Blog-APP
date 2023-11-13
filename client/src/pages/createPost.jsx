@@ -2,8 +2,7 @@ import { useState } from 'react';
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import { useNavigate } from 'react-router-dom';
-import "../design/workOnPost.css"
-import axios from 'axios';
+
 
 const modules = {
   toolbar:[ 
@@ -48,45 +47,43 @@ const CreatePost = () => {
     data.set('content', content);
     data.set('file', files[0]);
     e.preventDefault();
-
-    try {
-      const response = await axios.post('/post', data, {});
-
-      if (response.status === 200) {
-        alert('Post created successfully!');
-        navigate('/');
+    const response =  await fetch('http://localhost:5000/post', {
+      method:'POST',
+      body: data, 
+      credentials: 'include',
+    })
+    if (response.ok) {
+      // Registration successful, show success message or redirect to another page
+      alert('Post created successfully!');
+      navigate('/')
+        // Reset the form and clear input fields
         setTitle('');
         setSummary('');
         setContent('');
         setFiles('');
-      }
-    } catch (error) {
-      if (error.response) {
-        alert(error.response.data.error);
-      } else {
-        alert('An error occurred during post creation. Please try again later.');
-      }
-    }
+    } else {
+      // Registration failed, handle error response from the server
+      const data = await response.json();
+      alert(data.error); // Display the error message sent by the server
+    } 
+
   }
 
   return (
     <form onSubmit={createNewPost}>
       <input
-        className='inputCreate'
         type = 'title'
         placeholder="Title"
         value={title}
         onChange={e => setTitle(e.target.value)}
       />
        <input
-       className='inputCreate'
         type = 'summary'
         placeholder="Summary"
         value={summary}
         onChange={e => setSummary(e.target.value)}
       />
        <input
-        className='imageR'
         type = 'file'
         onChange={e => setFiles(e.target.files)}
       />
