@@ -1,0 +1,67 @@
+.postPage {
+    background-color: #F4f2f3;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .image {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .img {
+    max-width: 80%;
+    height: 210px; /* Set a fixed height */
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+  
+  .Titles {
+    color:  #b379ab;
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  
+  .Titles::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color:  #C0A9BD;
+    margin: 10px auto;
+  }
+  
+  .Authorr {
+    color: #004563;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .time {
+    color: #333;
+    font-style: italic;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .body {
+    line-height: 1.6;
+    color: #000;
+    
+  }
+  
+  span {
+    color: #000;
+  }
+  
+  
+/* Responsive Styles for 414px and below */
+@media screen and (max-width: 414px) {
+
+  .body {
+   width: 300px;
+
+  }
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+.login-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: rgb(0, 69, 99);
+  }
+  
+  .inputText {
+    width: 90%;
+    padding: 10px;
+    border-style: none;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .visible{
+    position: absolute;
+    right: 30px;
+    bottom: 135px;
+  }
+
+  .inputText::placeholder {
+    color: #999;
+  }
+  
+  button.btnLog {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #C0A9BD;
+    color: white;
+    border: none;
+    font-family: 'Playpen Sans', cursive;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.btnLog:hover {
+    background-color: #94A7AE;
+    color: #fcfcfc;
+  }
+  
+  .error {
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .linka{
+    text-decoration: none;
+    color: rgb(0, 69, 99);
+  }
+  
+/* 
+#F4f2f3
+#C0A9BD
+#94A7AE
+#64766A */
+

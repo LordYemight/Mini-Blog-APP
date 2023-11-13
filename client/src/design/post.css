@@ -1,0 +1,72 @@
+/* post.css */
+
+.post {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.postimage {
+    width: 100%;
+    border: none;
+}
+
+.postImg {
+    max-width: 80%;
+    height: 210px; /* Set a fixed height */
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    border-radius: 8px; /* Add rounded corners */
+    transition: transform 0.3s ease; /* Add a smooth transition effect on hover */
+  }
+  
+  .postImg:hover {
+    transform: scale(1.05); /* Scale the image slightly on hover for a pop effect */
+  }
+  
+
+.texts {
+    width: 100%;
+}
+
+.postTitle {
+    margin: 0;
+    font-size: 1.7rem;
+
+}
+
+.postlink {
+    text-decoration: none;
+}
+
+
+.info {
+    margin: 6px 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+    color: #888;
+}
+
+.postauthor {
+    color: #333;
+    text-decoration: none;
+}
+
+.postsummary {
+    margin: 10px 0;
+    line-height: 1.2rem;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .post {
+        grid-template-columns: 1fr;
+    }
+}

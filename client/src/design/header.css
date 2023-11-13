@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid rgb(0, 69, 99);
+  }
+  
+  header a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    
+  }
+
+  header a:hover {
+    color: rgb(0, 69, 99);
+    font-weight: bold;
+  }
+  
+  header a.logo {
+    font-weight: bold;
+  }
+  
+  header nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .login {
+    color: rgb(0, 69, 99);
+    font-weight: bold;
+  }
+  
+  span {
+    color: black;
+  }
+  /* 
+#F4f2f3
+#C0A9BD
+#94A7AE
+#64766A */
